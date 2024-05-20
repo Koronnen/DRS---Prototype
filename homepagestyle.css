@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "K2D", sans-serif;
+}
+header {
+    background-color: white;
+    border-bottom: black solid 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 0px 0 27px;
+}
+.Logo {
+    display: flex;
+    justify-content:center ;
+    padding-left: 15px;
+}
+.Logo img {
+    width: 10pc;
+}
+.list_menu_container {
+    display:flex ;
+    justify-content: right;
+    width: 55%;
+    align-items: center;
+    font-size: 20px;
+
+}
+.list_menu {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    /* background-color: aqua; */
+    color: black;
+    margin-right: 5px;
+}
+.list_menu a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+.list_menu span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 4.7pc;
+    border-radius: 7px;
+}
+.list_menu i {
+    padding-left: 12px
+}
+.list_menu span:hover {
+    box-shadow: 0 8px 7px rgba(0, 0, 0, 0.5);
+    transition: 0.1s;
+}
+.list_menu span:active {
+    background-color:#DEDEDD;
+    opacity: 0.7s;
+}
+.User_admin{
+    display: flex;
+    background-color: #DEDEDD;
+    align-items: center;
+    padding: 0 9px 0 15px 
+}
+/* .User_admin_container {
+   
+} */
+.User_admin p {
+    text-align: right;
+}
+.User_admin i {
+    display: flex;
+    align-items: center;
+    font-size: 5pc;
+}
+.User_admin_container a {
+    text-decoration: none;
+    color: black;
+    height: 10pc;
+}
+.User_admin_container a:active {
+    opacity: 0.7;
+}
+
+body {
+    background-image: url(Pictures/database.jpg);
+}
+
+.welcome_shape {
+    display: inline-block;
+
+}
+.square {
+    height: 50px;
+    width: 300px;
+    background-color: #FFD450;
+    font-family: "K2D", "sans-serif";
+    padding: 0px;
+    font-size: 35px;
+    display: inline-block;
+    padding-left: 20px;
+    position: relative;
+    margin-top: 0;
+  }
+
+  .triangle {
+    width: 0;
+	height: 0;
+	border-top: 26px solid transparent;
+	border-left: 70px solid #FFD450;
+	border-bottom: 26px solid transparent;
+    display: inline-block;
+    position: absolute;
+  }
+
+.drs {
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+.drs_title {
+    color: white;
+    position:relative;
+    font-size: 50px;
+    padding: 20px;
+    padding-bottom: 30px;
+}
+
+.docs{
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.docs.visible {
+    opacity: 1;
+}
+
+.UAL {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.UAL.visible {
+    opacity: 1;
+}
+
+.DocDashboard {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+.DocDashboard.visible {
+    opacity: 1;
+}
+
+.recently_uploaded_data, .recently_uploaded_header, .recently_uploaded{
+    position: relative;
+}
+
+.recently_uploaded {
+    display: inline-block;
+}
+
+th {
+    background-color: #FFD450;
+    font-size: 40px;
+    padding: 10px;
+    padding-left: 22px;
+    padding-right: 22px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 5px rgb(0, 0, 0, 0.3);
+}
+
+td {
+    padding: 10px;
+    font-size: 20px;
+    border-bottom: 5px;
+    border-color: black;
+}
+
+.recently_table_data {
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 10px;
+    box-shadow: 1px 1px 2px 5px rgb(0, 0, 0, 0.3);
+}
+
+.time {
+    text-align: center;
+    border-collapse: collapse;
+    width: 30%;
+}
+
+.documents_btn {
+    background-color: #134991;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    font-size: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.documents_btn:hover{
+    background-color: #0e366a;
+}
+
+.UAL {
+    position:relative;
+    display: inline-block;
+}
+
+.UAL_data {
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 10px;
+    box-shadow: 1px 1px 2px 5px rgb(0, 0, 0, 0.3);
+}
+
+.DocDashboard_data{
+    background-color: white;
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 10px;
+    box-shadow: 1px 1px 2px 5px rgb(0, 0, 0, 0.3);
+}
+.DocDashboard_header th {
+    font-size: 30px;
+    padding: 15px 10px 20px 10px;
+    display: inline-block;
+}
+
+.docs {
+    margin-left: auto;
+    margin-right: auto;
+}

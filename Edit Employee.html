@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+    <link rel="stylesheet" href="Edit Employee.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/021a931c6f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="Pictures/icon.jpg">
+    <title> DRS - Add Employee </title>
+</head>
+<body>
+    <Header>
+        <div class="Logo">
+            <a href="homepage.html"><image src="Pictures/drslogo.jpg"></image></a>
+    </div>
+        </div>
+
+        <div class="list_menu_container">
+            <div class="list_menu">
+                <a href="#">
+                    <span>Library<i class='bx bxs-down-arrow'></i></span>
+                </a>
+                <a href="#">
+                    <span href="#">Documents</span>
+                </a href="#">
+                <a href="audit_log.html">
+                    <span href="#">Audit log</span>
+                </a>
+                <a href="admintools.html">
+                    <span href="#">Admin tools</span>
+                </a>
+            </div>
+            <br>
+            
+        <div class="User_admin_container">  
+            <a href="#">
+                <div class="User_admin">
+                <p>
+                 USER<br>
+                Administrator 
+                </p>
+                <i class='bx bxs-user'></i>
+                </div>
+            </a>
+            <div class="drpdwn_ctnt">
+                <a href="Profile.html"> Profile <i class='bx bx-edit' ></i></a>
+                <a href="login.html"> Log out <i class='bx bx-exit'></i></a>
+            </div>
+        </div>  
+    </Header>
+    <br>
+    <h2 style="margin-left: 30px;">User Information</h2>
+    <table style="margin-left: 30px;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Department</th>
+                <th>Title</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>
+                    <div class="role-container">
+                        <span class="current-role">Developer</span>
+                        <span class="pen-icon">✎</span>
+                        <ul class="role-dropdown">
+                            <li class="role-option">Encoder</li>
+                            <li class="role-option">Viewer</li>
+                            <li class="role-option">Admin</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>Engineering</td>
+                <td>Senior Developer</td>
+                <td>
+                    Offline
+                    <span class="status offline"></span>
+                </td>
+            </tr>
+            <!-- Add more user rows as needed -->
+        </tbody>
+    </table>
+
+    <button class="delete-button" style="margin-left: 30px;"><i class="fa fa-trash-o"></i>Delete User</button>
+    <button class="edit-button" style="margin-left: 30px;"><i class="fa fa-refresh"></i>Reset Password</button>
+<br><br>
+    <h2 style="margin-left: 30px;">User Activity Log</h2>
+    <table style="margin-left: 30px;">
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>Action</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>Login</td>
+                <td>2024-05-17</td>
+                <td>10:30:00</td>
+            </tr>
+            <!-- Add more activity log rows as needed -->
+        </tbody>
+    </table>
+
+    <script>
+        document.querySelectorAll('.pen-icon').forEach(penIcon => {
+            penIcon.addEventListener('click', (event) => {
+                const roleContainer = penIcon.closest('.role-container');
+                const roleDropdown = roleContainer.querySelector('.role-dropdown');
+                roleDropdown.style.display = roleDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        document.querySelectorAll('.role-option').forEach(roleOption => {
+            roleOption.addEventListener('click', (event) => {
+                const roleContainer = roleOption.closest('.role-container');
+                const currentRole = roleContainer.querySelector('.current-role');
+                const newRole = roleOption.textContent;
+                currentRole.textContent = newRole;
+                roleContainer.querySelector('.role-dropdown').style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="admintoolsstyle.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/021a931c6f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <Header>
+        <div class="Logo">
+            <a href="homepage.html"><image src="Pictures/drslogo.jpg"></image></a>
+        </div>
+
+        <div class="list_menu_container">
+            <div class="list_menu">
+                <a href="#">
+                    <span>Library<i class='bx bxs-down-arrow'></i></span>
+                </a>
+                <a href="#">
+                    <span href="#">Documents</span>
+                </a>
+                <a href="audit_log.html">
+                    <span href="#">Audit log</span>
+                </a>
+                <a href="#">
+                    <span href="#">Admin tools</span>
+                </a>
+            </div>
+            <br>
+
+            <div class="User_admin_container">
+                <a href="#">
+                    <div class="User_admin">
+                        <p>
+                            USER<br>
+                            Administrator
+                        </p>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                </a>
+                <div class="drpdwn_ctnt">
+                    <a href="#">log out <i class='bx bx-exit'></i></a>
+                    <a href="#">Sign out <i class='bx bx-edit'></i></a>
+                </div>
+            </div>
+    </Header>
+    <br>
+    <br>
+    <div class="title_container">
+        <p class="title"> Employees </p>
+        <button class="add_btn"> <i class="fa fa-address-card-o"></i> Add New Employee</button>
+    </div>
+    <br>
+    <div class="emptable_container">
+        <table class="emptable">
+            <tr>
+                <th> Name</th>
+                <th>Role</th>
+                <th> Department </th>
+                <th> Title </th>
+                <th> Status </th>
+                <th> More </th>
+            </tr>
+            <tr>
+                <td> Cruz, Elena </td>
+                <td> Viewer </td>
+                <td> GDTB </td>
+                <td> Senior Network Administrator</td>
+                <td> Active <i class="fas fa-user-alt" style="color: green;"></i></td>
+                <td> Edit <button class="settings"><i class="fa fa-gear"></i></button></td>
+            </tr>
+            <tr>
+                <td> Chen, Marcus </td>
+                <td> Encoder </td>
+                <td> GDTB </td>
+                <td> Software Developer </td>
+                <td> Offline <i class="fas fa-user-alt" style="color: red;"></i></td>
+                <td> Edit <button class="settings"><i class="fa fa-gear"></i></button></td>
+            </tr>
+            <tr>
+                <td> Yaki, Soba </td>
+                <td> Viewer </td>
+                <td> GDTB </td>
+                <td> Data Analyst </td>
+                <td> Offline <i class="fas fa-user-alt" style="color: red;"></i></td>
+                <td> Edit <button class="settings"><i class="fa fa-gear"></i></button></td>
+            </tr>
+            <tr>
+                <td>    Caligo, Juan </td>
+                <td> Viewer </td>
+                <td> GDTB </td>
+                <td> I.T. Security Specialist </td>
+                <td> Active  <i class="fas fa-user-alt" style="color: green;"></i></td>
+                <td> Edit <button class="settings"><i class="fa fa-gear"></i></button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

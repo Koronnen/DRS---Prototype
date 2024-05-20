@@ -1,0 +1,109 @@
+.userprofile_container {
+    justify-content: space-between;
+    margin: auto;
+    position: relative;
+}
+
+.profile_table, .logininfo_table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.profile_table th, .profile_table td, .logininfo_table th, .logininfo_table td {
+    padding: 8px;
+}
+
+th {
+    font-size: 35px;
+}
+
+td {
+    font-size: 25px;
+    text-align: left;
+}
+
+.edit_name{
+    padding: 5px;
+    background-color: transparent;
+    border: transparent;
+}
+
+.edit_name:hover{
+    background: #D9D9D9;
+}
+
+.show_pass {
+    background: none;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.edit_name {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.password_container, .username_container {
+    display: flex;
+    text-align: right;
+}
+
+.show_pass:hover {
+    background-color: #D9D9D9;
+}
+
+.password_container {
+    display: flex;
+    align-items: center;
+}
+
+.indicator {
+    text-align: right;
+}
+
+.userprofile {
+    margin: 0 auto;
+}
+
+.profile_table {
+    width: 80%;
+}
+
+.profile_container th, .logininfo_container th {
+    padding-bottom:  40px;
+    padding-top: 50px;
+}
+
+.save_exit {
+    bottom: 50px;
+    position: absolute;
+    right: 50px;
+}
+.save, .exit {
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.save {
+    background-color: #133E91;
+    color: white;
+}
+
+.save:hover{
+    background-color: #0e2b66;
+}
+
+.exit {
+    background-color: #E52025;
+    color: white;
+}
+
+.exit:hover {
+    background-color: #b61a20;
+}

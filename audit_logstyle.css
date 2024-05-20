@@ -1,0 +1,80 @@
+.title {
+    padding-left: 5vh;
+    padding-top: 2vh;
+    font-size: 40px;
+}
+
+.searchbar_container {
+    padding: 5px 5px 5px 38px;
+}
+.searchbar {
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px;
+    border-style: solid;
+    border-color: rgb(145, 145, 145);
+    color: rgb(145, 145, 145);
+    width: 50vh;
+}
+
+.searchbar_container i {
+    font-size: 3vh;
+}
+
+.filter {
+    background-color: white;
+    border: transparent;
+    cursor: pointer;
+    padding: 1vh;
+    border-radius: 15px;
+}
+
+.filter:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+.audit_log_table {
+    background-color: #D9D9D9;
+}
+
+td, th {
+    border-bottom: 1px;
+    border-style: solid;
+    border-right: 1px;
+    border-top: 0px;
+    border-left: 0px;
+    padding: 15px;
+    text-align: center;
+    margin: 0;
+}
+
+th {
+    font-size: 25px;
+    border-right: 1px;
+    border-style: solid;
+}
+
+td {
+    font-size: 20px;
+    border-right: 1px;
+    border-style: solid;
+}
+
+table {
+    width: 95%;
+    margin: auto;
+}
+
+.sortbutton {
+    font-size: 25px;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.sortbutton:hover {
+    background-color: #989898;
+}

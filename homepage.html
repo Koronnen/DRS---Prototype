@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="homepagestyle.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="homepage.js"></script>
+        <title> DRS - HomePage</title>
+        <link rel="icon" type="image/x-icon" href="Pictures/icon.jpg">
+    </head>
+    <body onload="animation()">
+
+        <Header>
+            <div class="Logo">
+                <a href="homepage.html"><image src="Pictures/drslogo.jpg"></image></a>
+        </div>
+            </div>
+    
+            <div class="list_menu_container">
+                <div class="list_menu">
+                    <a href="#">
+                        <span>Library<i class='bx bxs-down-arrow'></i></span>
+                    </a>
+                    <a href="#">
+                        <span href="#">Documents</span>
+                    </a href="#">
+                    <a href="audit_log.html">
+                        <span href="#">Audit log</span>
+                    </a>
+                    <a href="admintools.html">
+                        <span href="#">Admin tools</span>
+                    </a>
+                </div>
+                <br>
+                
+            <div class="User_admin_container">  
+                <a href="#">
+                    <div class="User_admin">
+                    <p>
+                     USER<br>
+                    Administrator 
+                    </p>
+                    <i class='bx bxs-user'></i>
+                    </div>
+                </a>
+                <div class="drpdwn_ctnt">
+                    <a href="Profile.html"> Profile <i class='bx bx-edit' ></i></a>
+                    <a href="login.html"> Log out <i class='bx bx-exit'></i></a>
+                </div>
+            </div>  
+        </Header>
+   
+        <div class="overlay"></div> 
+    <br>
+    <br>
+            <div class="welcome_shape">
+            <div class="square"><p class="welcome">Welcome, USER</p></div><div class="triangle"></div>
+        </div>
+        <div class="drs">
+            <h1 class="drs_title"> Document Repository System</h1>
+        </div>
+        <table class="docs">
+            <tr>
+                <td valign="top"> 
+                    <div class="recently_uploaded">
+                    <table class="recently_table_header">
+                        <tr>
+                            <th colspan="3"> Recenty Uploaded</th>
+                        </tr>
+                    </table>
+                    <table class="recently_table_data">
+                        <tr class="recently_data">
+                            <td style="width: 70%;"> Sample.pdf </td>
+                            <td class="time"> 02:30 PM</td>
+                        </tr>
+                        <tr>
+                            <td > Sample.pdf</td>
+                            <td class="time"> 03:47 PM</td>
+                        </tr>
+                        <tr>
+                            <td > Sample.pdf </td>
+                            <td class="time"> 05:17 PM </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: right;"><a href="#"> <button class="documents_btn"> Documents >></button</a>> </td>
+                        </tr>
+                    </table>
+                    </div>
+                </td>
+                <td valign="top"> 
+                        <div class="UAL">
+                    <table class="UAL_header">
+                        <th colspan="2"> User Activity Log </th>
+                    </table>
+                    <table class="UAL_data">
+                        <tr>
+                            <td style="width: 70%;"> User1: Uploaded File </td>
+                            <td class="time"> 01:48 PM</td>
+                        </tr>
+                        <tr>
+                            <td> User2: Deleted File </td>
+                            <td class="time"> 2:23 PM</td>
+                        </tr>
+                        <tr> 
+                            <td> User3: Uploaded File</td>
+                            <td class="time"> 4:37 PM</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: right;"><a href="audit_log.html"><button class="documents_btn"> Manage >></button></a> </td>
+                        </tr>
+                    </table>
+                </div>
+                </td>
+            
+            <td valign="top">
+
+            <div class="DocDashboard"></div>
+                <table class="DocDashboard_header">
+                    <th colspan="2"> Document Dashboard </th>
+                </table>
+                <table class="DocDashboard_data">
+                    <tr>
+                        <td> Memorandum </td>
+                        <td class="time">34</td>
+                    </tr>
+                    <tr> 
+                        <td>Republic Act </td>
+                        <td class="time">23</td>
+                        
+                    </tr>
+                    <tr>
+                        <td> Others</td>
+                        <td class="time">15</td>
+                    </tr>
+                    <tr> 
+                        <td> Total</td>
+                        <td class="time">72</td>
+                    </tr>
+                </table>
+            </div>
+            </td>
+        </tr>
+        </table>
+        <div class="recently_uploaded">
+    </body>
+</html>

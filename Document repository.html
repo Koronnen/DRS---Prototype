@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="admintoolsstyle.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/021a931c6f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Repository</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        #searchInput {
+            width: 70%;
+            padding: 8px 30px 8px 30px; /* Added padding for the icon */
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            background-image: url('search.png'); /* Path to your search icon */
+            background-repeat: no-repeat;
+            background-position: 10px center; /* Position of the icon */
+            background-size: 20px; /* Size of the icon */
+        }
+
+        }
+
+        .action-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+            .action-btn img {
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+            }
+
+        .bookmark {
+            color: #ddd;
+            font-size: 20px;
+        }
+
+            .bookmark:hover {
+                color: #ffcc00;
+            }
+
+        #addDocumentButton {
+            padding: 8px 15px;
+            margin-left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="Logo">
+            <a href="homepage.html"><image src="Pictures/drslogo.jpg"></image></a>
+        </div>
+
+        <div class="list_menu_container">
+            <div class="list_menu">
+                <a href="#">
+                    <span>Library<i class='bx bxs-down-arrow'></i></span>
+                </a>
+                <a href="Document repository.html">
+                    <span href="#">Documents</span>
+                </a>
+                <a href="audit_log.html">
+                    <span href="#">Audit log</span>
+                </a>
+                <a href="#">
+                    <span href="#">Admin tools</span>
+                </a>
+            </div>
+            <br>
+
+            <div class="User_admin_container">
+                <a href="#">
+                    <div class="User_admin">
+                        <p>
+                            USER<br>
+                            Administrator
+                        </p>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                </a>
+                <div class="drpdwn_ctnt">
+                    <a href="#">log out <i class='bx bx-exit'></i></a>
+                    <a href="#">Sign out <i class='bx bx-edit'></i></a>
+                </div>
+            </div>
+    </header>
+    <h1>Document Repository</h1>
+
+    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for documents..">
+    <button id="addDocumentButton" onclick="addDocument()">Add Document</button>
+
+    <select id="filterSelect" onchange="filterFunction()">
+        <option value="">All</option>
+        <option value="Title">Title</option>
+        <option value="Subject">Subject</option>
+        <option value="Document Type">Document</option>
+        <option value="Agency">Agency</option>
+        <option value="Author">Author</option>
+        <option value="Confidentiality Level">Confidentiality Level</option>
+        <option value="Status">Category3</option>
+        <option value="Date Added">Date Added</option>
+        <!-- Add more options for different categories -->
+    </select>
+
+    <button onclick="filterFunction()">Filter</button>
+
+    <table id="documentTable">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Subject</th>
+                <th>Document Type</th>
+                <th>Agency</th>
+                <th>Author</th>
+                <th>Confidentiality Level</th>
+                <th>Status</th>
+                <th>Date Added</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Placeholder data, replace with actual data -->
+            <tr>
+                <td><span class="bookmark" onclick="toggleBookmark(this)">&#9734;</span> Document1</td>
+                <td>Subject1</td>
+                <td>Type1</td>
+                <td>Agency1</td>
+                <td>Author1</td>
+                <td>Confidential</td>
+                <td>Active</td>
+                <td>2024-05-16</td>
+                <td>
+                    <button class="action-btn" onclick="viewDocument()"><img src="view.png" alt="View"></button>
+                    <button class="action-btn" onclick="deleteDocument()"><img src="delete.png" alt="Delete"></button>
+                    <button class="action-btn" onclick="editDocument()"><img src="edit.png" alt="Edit"></button>
+                    <button class="action-btn" onclick="downloadDocument()"><img src="downloads.png" alt="Download"></button>
+                </td>
+            </tr>
+            <!-- Add more rows for additional documents -->
+        </tbody>
+    </table>
+
+    <dialog id="addDocumentDialog">
+        <form>
+            <label for="fileUpload">Upload File:</label>
+            <input type="file" id="fileUpload"><br><br>
+
+            <label for="bulkUpload">Bulk Upload File:</label>
+            <input type="file" id="bulkUpload" multiple><br><br>
+
+
+            <label for="fileName">File Name:</label>
+            <input type="text" id="fileName"><br><br>
+
+            <label for="title">Title:</label>
+            <input type="text" id="title"><br><br>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject"><br><br>
+
+            <label for="docType">Document Type:</label>
+            <select id="docType">
+                <option value="Type1">Type1</option>
+                <option value="Type2">Type2</option>
+                <!-- Add more options as needed -->
+            </select><br><br>
+
+            <label for="agency">Agency:</label>
+            <select id="agency">
+                <option value="Agency1">Agency1</option>
+                <option value="Agency2">Agency2</option>
+                <!-- Add more options as needed -->
+            </select><br><br>
+
+            <label for="confidentiality">Confidentiality Level:</label>
+            <select id="confidentiality">
+                <option value="Confidential">Confidential</option>
+                <option value="Non-confidential">Non-confidential</option>
+                <!-- Add more options as needed -->
+            </select><br><br>
+
+            <label for="status">Status:</label>
+            <select id="status">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+                <!-- Add more options as needed -->
+            </select><br><br>
+
+            <label for="tags">Tags:</label>
+            <input type="text" id="tags"><br><br>
+
+            <label for="authorSurname">Author Surname:</label>
+            <input type="text" id="authorSurname"><br><br>
+
+            <label for="authorFirstName">Author First Name:</label>
+            <input type="text" id="authorFirstName"><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </dialog>
+
+    <dialog id="editDocumentDialog">
+        <form>
+            <label for="editFileName">File Name:</label>
+            <input type="text" id="editFileName"><br><br>
+
+            <label for="editTitle">Title:</label>
+            <input type="text" id="editTitle"><br><br>
+
+            <label for="editSubject">Subject:</label>
+            <input type="text" id="editSubject"><br><br>
+
+            <label for="editDocType">Document Type:</label>
+            <select id="editDocType">
+                <option value="Changeable">Changeable</option>
+                <!-- Add more options as needed -->
+            </select><br><br>
+
+            <label for="editConfidentiality">Confidentiality Level:</label>
+            <select id="editConfidentiality">
+                <option value="Changeable">Changeable</option>
+                <!-- Add more options as needed -->
+            </select><br><br>
+
+            <label for="editAgency">Agency:</label>
+            <select id="editAgency">
+                <option value="Changeable">Changeable</option>
+                <!-- Add more options as needed -->
+            </select><br><br>
+
+            <label for="editTags">Tags:</label>
+            <input type="text" id="editTags"><br><br>
+
+            <label for="editAuthorLastName">Author Last Name:</label>
+            <input type="text" id="editAuthorLastName"><br><br>
+
+            <label for="editAuthorFirstName">Author First Name:</label>
+            <input type="text" id="editAuthorFirstName"><br><br>
+
+            <label for="editStatus">Status:</label>
+            <select id="editStatus">
+                <option value="Changeable">Changeable</option>
+                <!-- Add more options as needed -->
+            </select><br><br>
+
+            <label for="editComment">Comment:</label>
+            <textarea id="editComment"></textarea><br><br>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </dialog>
+
+    <script>
+        function searchFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("documentTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // Change index to match column
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        function filterFunction() {
+            var select, filter, table, tr, td, i, txtValue;
+            select = document.getElementById("filterSelect");
+            filter = select.value.toUpperCase();
+            table = document.getElementById("documentTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1]; // Change index to match column
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase() === filter || filter === "") {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+
+        // Your existing JavaScript functions
+
+        function viewDocument() {
+            // Get the document details
+            var title = "Document1";
+            var subject = "Subject1";
+            var docType = "Type1";
+            var agency = "Agency1";
+            var author = "Author1";
+            var confidentiality = "Confidential";
+            var status = "Active";
+            var dateAdded = "2024-05-16";
+
+            // Open the new page with the document details
+            var url = `document_details.html?title=${title}&subject=${subject}&docType=${docType}&agency=${agency}&author=${author}&confidentiality=${confidentiality}&status=${status}&dateAdded=${dateAdded}`;
+            window.open(url, '_blank');
+        }
+
+
+        function deleteDocument() {
+            alert("Delete document clicked");
+            // Implement delete document functionality
+        }
+
+        function editDocument() {
+            var dialog = document.getElementById("editDocumentDialog");
+            dialog.showModal();
+
+            // Populate the form with existing document data for editing
+            var documentData = getDocumentData(); // Implement this function to get the data
+            document.getElementById("editFileName").value = documentData.fileName;
+            document.getElementById("editTitle").value = documentData.title;
+            document.getElementById("editSubject").value = documentData.subject;
+            document.getElementById("editDocType").value = documentData.docType;
+            document.getElementById("editConfidentiality").value = documentData.confidentiality;
+            document.getElementById("editAgency").value = documentData.agency;
+            document.getElementById("editTags").value = documentData.tags;
+            document.getElementById("editAuthorLastName").value = documentData.authorLastName;
+            document.getElementById("editAuthorFirstName").value = documentData.authorFirstName;
+            document.getElementById("editStatus").value = documentData.status;
+            document.getElementById("editComment").value = documentData.comment;
+
+            // Handle form submission to save changes
+            document.getElementById("editDocumentForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Get updated document data from the form
+                var updatedDocumentData = {
+                    fileName: document.getElementById("editFileName").value,
+                    title: document.getElementById("editTitle").value,
+                    subject: document.getElementById("editSubject").value,
+                    docType: document.getElementById("editDocType").value,
+                    confidentiality: document.getElementById("editConfidentiality").value,
+                    agency: document.getElementById("editAgency").value,
+                    tags: document.getElementById("editTags").value,
+                    authorLastName: document.getElementById("editAuthorLastName").value,
+                    authorFirstName: document.getElementById("editAuthorFirstName").value,
+                    status: document.getElementById("editStatus").value,
+                    comment: document.getElementById("editComment").value
+                };
+
+                // Implement the function to save the updated document data
+                saveDocumentChanges(updatedDocumentData);
+
+                // Close the dialog after saving changes
+                dialog.close();
+            });
+        }
+
+
+        function downloadDocument() {
+            alert("Download document clicked");
+            // Implement download document functionality
+        }
+
+        function toggleBookmark(element) {
+            if (element.innerHTML === "☆") {
+                element.innerHTML = "★";
+            } else {
+                element.innerHTML = "☆";
+            }
+        }
+
+        function addDocument() {
+            var dialog = document.getElementById("addDocumentDialog");
+            dialog.showModal();
+        }
+    </script>
+</body>
+
+</html>

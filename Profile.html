@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/021a931c6f.js" crossorigin="anonymous"></script>
+    <script src="profile.js"></script>
+    <title> DRS - Profile</title>
+    <link rel="icon" type="image/x-icon" href="Pictures/icon.jpg">
+<body>
+    <Header>
+        <div class="Logo">
+            <a href="homepage.html"><image src="Pictures/drslogo.jpg"></image></a>
+    </div>
+        </div>
+
+        <div class="list_menu_container">
+            <div class="list_menu">
+                <a href="#">
+                    <span>Library<i class='bx bxs-down-arrow'></i></span>
+                </a>
+                <a href="#">
+                    <span href="#">Documents</span>
+                </a href="#">
+                <a href="audit_log.html">
+                    <span href="#">Audit log</span>
+                </a>
+                <a href="admintools.html">
+                    <span href="#">Admin tools</span>
+                </a>
+            </div>
+            <br>
+            
+        <div class="User_admin_container">  
+            <a href="#">
+                <div class="User_admin">
+                <p>
+                 USER<br>
+                Administrator 
+                </p>
+                <i class='bx bxs-user'></i>
+                </div>
+            </a>
+            <div class="drpdwn_ctnt">
+                <a href="Profile.html"> Profile <i class='bx bx-edit' ></i></a>
+                <a href="login.html"> Log out <i class='bx bx-exit'></i></a>
+            </div>
+        </div>  
+    </Header>
+
+    <div class="userprofile_container">
+        <table class="userprofile" width="80%">
+            <tr>
+                <td valign="top">
+                <div class="profile_container">
+                <table class="profile_table">
+                    <tr>
+                        <th> Profile </th>
+                    </tr>
+                    <tr>
+                        <td class="indicator"> Name: </td>
+                        <td> Dela Cruz, Juan </td>
+                    </tr>
+                    <tr>
+                        <td class="indicator"> Role: </td>
+                        <td> Encoder </td>
+                    </tr>
+                    <tr>
+                        <td class="indicator"> Position: </td>
+                        <td> Systems Analyst </td>
+                    </tr>
+                    <tr>
+                        <td class="indicator"> Department: </td>
+                        <td> Department of Information<br> and Communications Technology (GDTB) </td>
+                    </tr>
+                </table>
+             </div>  
+            </td>
+                <td valign="top">
+                <div class="logininfo_container">
+                <table class="logininfo_table">
+                    <tr> 
+                        <th> Login Information</th>
+                    </tr>
+                    <tr>
+                        <td> Username: </td>
+                        <td>
+                            <div class="username_container" id="username_container">
+                                <span id="username">DelaCruz.Juan</span>
+                                <button class="edit_name" onclick="edit_username()"><i class='fas fa-pen'></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td> Password: </td>
+                        <td>
+                            <div class="password_container">
+                                <p id="password">*******</p>
+                                <button class="show_pass" onclick="showPass()"><i class="fa-solid fa-eye" style="color:black"></i></button>
+                            </div>
+                    </tr>
+                </table>
+            </div>
+            </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="save_exit">
+        <button class="save">Save <i class="fa fa-save"></i></button> <button class="exit">Exit <i class="fa fa-sign-out"></i></button>
+    </div>
+</body>
+</html>

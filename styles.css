@@ -1,0 +1,97 @@
+* {
+    font-family: "K2D", "sans-serif";
+}
+
+body {
+    background-image: url("Pictures/DICT.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.login_container {
+    background-color: white;
+    text-align: center;
+    width: 463px;
+    height: 559px;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.logo {
+    height: 130px;
+    padding-bottom: 10vh;
+    padding-top: 2vh;
+}
+
+.uname{
+    font-family: "K2D", "sans-serif";
+    padding: 20px;
+    width: 55vh;
+    height: 7vh;
+    border-radius: 15px;
+    border: 1px 1px;
+    border-color: #ababab;
+    border-style: solid;
+    font-size: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.username{
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.password{
+    margin: auto;
+}
+
+.pword {
+    font-family: "K2D", "sans-serif";
+    padding: 20px;
+    width: 55vh;
+    height: 7vh;
+    border-radius: 15px;
+    border-color: #ababab;
+    border-style: solid;
+    border: 1px 1px;
+    font-size: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.forgot_pass {
+    text-align: right;
+    cursor: pointer;
+    padding: 10px 30px 10px 10px;
+}
+
+.forgot_password:hover {
+    text-decoration: underline;
+}
+
+.login_btn {
+    width: 250px;
+    padding: 15px;
+    font-family: "K2D", "sans-serif";
+    font-size: 18px;
+    border-radius: 30px;
+    border: 1px 1px solid;
+    border-color: #ababab;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.login_btn:hover {
+    background-color: #818181;
+}
+
+.forgot_password {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}

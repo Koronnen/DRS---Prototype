@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="admintoolsstyle.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/021a931c6f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="Pictures/icon.jpg">
+    <title> DRS - Administrator</title>
+    <style>
+        dialog {
+            width: 300px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Center the dialog box */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <Header>
+        <div class="Logo">
+            <a href="homepage.html"><image src="Pictures/drslogo.jpg"></image></a>
+    </div>
+        </div>
+
+        <div class="list_menu_container">
+            <div class="list_menu">
+                <a href="#">
+                    <span>Library<i class='bx bxs-down-arrow'></i></span>
+                </a>
+                <a href="#">
+                    <span href="#">Documents</span>
+                </a href="#">
+                <a href="audit_log.html">
+                    <span href="#">Audit log</span>
+                </a>
+                <a href="admintools.html">
+                    <span href="#">Admin tools</span>
+                </a>
+            </div>
+            <br>
+            
+        <div class="User_admin_container">  
+            <a href="#">
+                <div class="User_admin">
+                <p>
+                 USER<br>
+                Administrator 
+                </p>
+                <i class='bx bxs-user'></i>
+                </div>
+            </a>
+            <div class="drpdwn_ctnt">
+                <a href="Profile.html"> Profile <i class='bx bx-edit' ></i></a>
+                <a href="login.html"> Log out <i class='bx bx-exit'></i></a>
+            </div>
+        </div>  
+    </Header>
+    <br>
+    <br>
+    <div class="title_container">
+        <p class="title"> Employees </p>
+        <button class="add_btn"> <i class="fa fa-address-card-o"></i> Add New Employee</button>
+    </div>
+    <br>
+    <div class="emptable_container">
+        <table class="emptable">
+            <tr>
+                <th> Name</th>
+                <th>Role</th>
+                <th> Department </th>
+                <th> Title </th>
+                <th> Status </th>
+                <th> More </th>
+            </tr>
+            <tr>
+                <td> Cruz, Elena </td>
+                <td> Viewer </td>
+                <td> GDTB </td>
+                <td> Senior Network Administrator</td>
+                <td> Active <i class="fas fa-user-alt" style="color: green;"></i></td>
+                <td> Edit <a href="Edit Employee.html"> <button class="settings"><i class="fa fa-gear"></i></button></a></td>
+            </tr>
+            <tr>
+                <td> Chen, Marcus </td>
+                <td> Encoder </td>
+                <td> GDTB </td>
+                <td> Software Developer </td>
+                <td> Offline <i class="fas fa-user-alt" style="color: red;"></i></td>
+                <td> Edit <a href="Edit Employee.html"> <button class="settings"><i class="fa fa-gear"></i></button></a></td>
+            </tr>
+            <tr>
+                <td> Yaki, Soba </td>
+                <td> Viewer </td>
+                <td> GDTB </td>
+                <td> Data Analyst </td>
+                <td> Offline <i class="fas fa-user-alt" style="color: red;"></i></td>
+                <td> Edit <a href="Edit Employee.html"> <button class="settings"><i class="fa fa-gear"></i></button></a></td>
+            </tr>
+            <tr>
+                <td>    Caligo, Juan </td>
+                <td> Viewer </td>
+                <td> GDTB </td>
+                <td> I.T. Security Specialist </td>
+                <td> Active  <i class="fas fa-user-alt" style="color: green;"></i></td>
+                <td> Edit <a href="Edit Employee.html"> <button class="settings"><i class="fa fa-gear"></i></button></a></td>
+            </tr>
+        </table>
+    </div>
+    <button id="addEmployeeBtn" class="add_btn"> <i class="fa fa-address-card-o"></i> Add New Employee</button>
+
+    <!-- Dialog Box for Adding New Employee -->
+    <dialog id="addEmployeeDialog">
+        <form method="dialog">
+            <p class="AddEmp"> Add Employee</p>
+            <input type="text" id="employeeName" name="employeeName" required class="field" placeholder="Name"><br><br>
+
+            <select id="employeeRole" name="employeeRole" required> 
+                <option value="Encoder">Encoder</option>
+                <option value="Viewer">Viewer</option>
+                <option value="Editor">Editor</option>
+            </select><br><br>
+
+            <input type="text" id="employeePosition" name="employeePosition" required class="field" placeholder="Position"><br><br>
+
+            <input type="text" id="employeeDepartment" name="employeeDepartment" required class="field" placeholder="Department"><br><br>
+
+            <input type="password" id="employeePassword" name="employeePassword" required class="field" placeholder="Input Default Password"><br>
+            <span id="defaultPasswordText">Your employee ID is set as the default password</span><br><br>
+
+            <input type="password" id="confirmPassword" name="confirmPassword" required class="field" placeholder="Confirm Default Password"><br><br>
+
+            <span id="passwordMatchText"></span><br><br>
+
+            <button id="confirmAddEmployeeBtn" type="submit" class="buttons">Confirm</button>
+            <button id="cancelAddEmployeeBtn" type="button">Cancel</button>
+        </form>
+    </dialog>
+
+    <!-- JavaScript to handle dialog behavior -->
+    <script>
+        var addEmployeeBtn = document.getElementById("addEmployeeBtn");
+        var addEmployeeDialog = document.getElementById("addEmployeeDialog");
+        var defaultPasswordText = document.getElementById("defaultPasswordText");
+        var passwordMatchText = document.getElementById("passwordMatchText");
+
+        addEmployeeBtn.addEventListener("click", function () {
+            addEmployeeDialog.showModal();
+        });
+
+        addEmployeeDialog.addEventListener("close", function () {
+            // Reset form fields when dialog is closed
+            addEmployeeDialog.querySelector("form").reset();
+            passwordMatchText.textContent = "";
+        });
+
+        document.getElementById("confirmAddEmployeeBtn").addEventListener("click", function (event) {
+            var password = document.getElementById("employeePassword").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                passwordMatchText.textContent = "Passwords do not match";
+                event.preventDefault();
+            } else {
+                passwordMatchText.textContent = "";
+            }
+        });
+        cancelAddEmployeeBtn.addEventListener("click", function () {
+            addEmployeeDialog.close();
+        });
+    </script>
+</body>
+</html>

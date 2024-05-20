@@ -1,0 +1,129 @@
+body {
+    font-family: "k2d", sans-serif;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+td{
+    font-size: 18px;
+}
+th {
+    background-color: #133E91;
+    color: white;
+    font-size: 24px;
+}
+
+button {
+    padding: 6px 30px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.delete-button {
+    background-color: #f44336;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    color: white;
+    font-size: 15px;
+}
+
+    .delete-button:hover {
+        background-color: #d32f2f;
+    }
+    
+.delete-button i {
+    padding-right: 5px;
+}
+
+.edit-button {
+    background-color: #133E91;
+    font-size: 15px;
+}
+
+    .edit-button:hover {
+        background-color: #0f2f6f
+    }
+
+.edit-button i {
+    padding-right: 5px;
+}
+
+.role-container {
+    display: inline-block;
+    position: relative;
+}
+
+.pen-icon {
+    cursor: pointer;
+    position: relative;
+}
+
+.role-dropdown {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1;
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.role-option {
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+    .role-option:hover {
+        background-color: #ddd;
+    }
+
+.role-container.active .role-dropdown {
+    display: block;
+}
+
+.status {
+    background: url('circle.png') no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+    .status.offline {
+        background: url('circle.png') no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
