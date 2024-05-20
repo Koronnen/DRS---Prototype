@@ -53,6 +53,8 @@ th {
     font-size: 25px;
     border-right: 1px;
     border-style: solid;
+    background-color: #133E91;
+    color: white;
 }
 
 td {
@@ -77,4 +79,8 @@ table {
 
 .sortbutton:hover {
     background-color: #989898;
+}
+
+tr:nth-child(even) {
+    background-color: white;
 }

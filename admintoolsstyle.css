@@ -38,6 +38,8 @@ th {
     border-bottom: 2px;
     border-right: 2px;
     border-color: #858585;
+    background-color: #133E91;
+    color: white;
 }
 td {
     font-size: 20px;
@@ -111,4 +113,8 @@ td, th {
     border-radius: 10px;
     border: 0;
     cursor: pointer;
+}
+
+tr:nth-child(even) {
+    background-color: white;
 }

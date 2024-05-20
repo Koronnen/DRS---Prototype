@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="icon" href="IMG/480px-DICT-Logo-icon_only.png">
+</head>
+<body>
+    
+    <Header>
+        <div class="Logo">
+            <a href="homepage.html"><image src="Pictures/drslogo.jpg"></image></a>
+    </div>
+        </div>
+
+        <div class="list_menu_container">
+            <div class="list_menu">
+                <a href="index.html">
+                    <span href="#">Documents</span>
+                </a>
+                <a href="audit_log.html">
+                    <span href="#">Audit log</span>
+                </a>
+                <a href="admintools.html">
+                    <span href="#">Admin tools</span>
+                </a>
+            </div>
+            <br>
+            
+        <div class="User_admin_container">  
+            <a href="#">
+                <div class="User_admin">
+                <p>
+                 USER<br>
+                Administrator 
+                </p>
+                <i class='bx bxs-user'></i>
+                </div>
+            </a>
+            <div class="drpdwn_ctnt">
+                <a href="Profile.html"> Profile <i class='bx bx-edit' ></i></a>
+                <a href="login.html"> Log out <i class='bx bx-exit'></i></a>
+            </div>
+        </div>  
+    </Header>
+
+    <main>
+        <div class="title_repo_con">
+            <h2>
+                Document Repository
+            </h2>
+        </div>
+        <div class="add_btn_cont">
+            <button class="add_btn" id="openAddDocument">
+                Add Document <i class='bx bxs-file-plus'></i>
+            </button>
+        </div>
+        <div class="add_doc_cont" id="addDocumentContent">
+            <div class="title_up_bulk">
+                <h2>
+                    Add document to repository
+                </h2>
+                <button>
+                    Upload file <i class='bx bx-cloud-upload'></i>
+                </button>
+                <button>
+                    Bulk upload <i class='bx bxs-chevrons-up'></i>
+                </button>
+            </div>
+            <div class="file_name_cont">
+                <input type="text" placeholder="File name" id="file_name">
+            </div>
+            <div class="title_search_cont">
+                <input type="text" placeholder="Title" id="title">
+                <input type="text" placeholder="Subject" id="subject">
+            </div>
+            <div class="docu_agency_cont">
+                <div id="docu_type">
+                    Document type <i class='bx bxs-down-arrow'></i>
+                </div>
+                <div id="cho_agency">
+                    Choose agency <i class='bx bxs-down-arrow'></i>
+                </div>
+                <div id="confi">
+                    Confidentiality level<i class='bx bxs-down-arrow'></i>
+                </div>
+            </div>
+            <div class="status_tags">
+                <div id="stats">
+                    Status <i class='bx bxs-down-arrow'></i>
+                </div>
+                <div id="tags">
+                    Tags <i class='bx bxs-down-arrow'></i>
+                </div>
+                <div class="three_files">
+                    <span>
+                        sample <i class='bx bxs-x-circle'></i>
+                    </span>
+                    <span>
+                        sample  <i class='bx bxs-x-circle'></i>
+                    </span>
+                    <span>
+                        sample  <i class='bx bxs-x-circle'></i>
+                    </span>
+                </div>
+            </div>
+            <div class="author_info">
+                <h2>
+                    Author Information
+                </h2>
+            </div>
+            <div class="sur_first">
+                <div class="sur_n_first_bars">
+                    <input type="text" placeholder="Surname" id="surname">
+                    <input type="text" placeholder="First name" id="first_name">
+                </div>
+                <div class="btn_repo_confirm_cancel">
+                    <button class="cancel_btn_repo">
+                        Cancel
+                    </buttons>
+                    <button class="confirm_btn_repo">
+                        Confirm
+                    </buttons>
+                </div>
+            </div>
+        </div>
+        <div class="search_cont">
+            <input type="search" placeholder="Document & keywords search" class="search_btn">
+        </div>
+        <div class="filter_cont"  id="filterButton">
+            <i class='bx bx-filter-alt'></i>
+            <div class="filter_cont2" id="filterContent">
+                <p>Filter by <i class='bx bx-filter-alt'></i> </p>            
+                <br>
+                <span>
+                    Tags <i class='bx bxs-down-arrow'></i>
+                </span>
+                <span>
+                    Type<i class='bx bxs-down-arrow'></i>
+                </span>
+                <span>
+                    Agency<i class='bx bxs-down-arrow'></i>
+                </span>
+                <span>
+                    Author<i class='bx bxs-down-arrow'></i>
+                </span>
+                <span>
+                    Confidentiality<i class='bx bxs-down-arrow'></i>
+                </span>
+                <span>
+                    Status<i class='bx bxs-down-arrow'></i>
+                </span>
+                <span>
+                    Date<i class='bx bxs-down-arrow'></i>
+                </span>
+                <span>
+                    Title<i class='bx bxs-down-arrow'></i>
+                </span>
+                <span>
+                    Subject<i class='bx bxs-down-arrow'></i>
+                </span>
+                <br>
+                <div class="btn_filter">
+                    <Button class="cancel_btn_filter">
+                        Cancel
+                    </Button>
+                    <button class="confirm_btn_filter">
+                        Confirm
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="docu_cont_table">
+            <table>
+                <tr class="table_headers">
+                    <th>
+                        Title
+                    </th>
+                    <th class="sub_cont">
+                        Subject
+                    </th>
+                    <th class="doc_type_cont">
+                        Document type
+                    </th>
+                    <th class="agency_cont">
+                        Agency
+                    </th>
+                    <th class="author_cont">
+                        Author
+                    </th>
+                    <th class="Confi_cont">
+                        Confidentiality level
+                    </th>
+                    <th class="status_cont">
+                        Status
+                    </th>
+                    <th class="date_cont">
+                        Date Added
+                    </th>
+                    <th class="action_cont">
+                        Action
+                    </th>
+                </tr>
+                <tr class="cell1">
+                    <td class="stars_fav">
+                        <i class='bx bx-star'></i>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                    </td>
+                    <td class="Btn_cells">
+                        <div>
+                            <span>
+                                <button><i class='bx bx-show' onclick="showContent()"></i></button>
+                                <button onclick="showConfirm()"><i class='bx bx-cloud-download' ></i></button>
+                                <button><i class='bx bx-edit' id="editBtn"></i></button>
+                                <button onclick="showConfirm()"><i class='bx bx-trash' ></i></button>
+                            </span>
+                        </div>
+                    </td>
+                    
+                </tr>
+                <tr class="cell2">
+                    <td class="stars_fav">
+                        <i class='bx bx-star'></i>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                    </td>
+                    <td class="Btn_cells">
+                        <div>
+                            <span>
+                                <button><i class='bx bx-show'onclick="showContent()" ></i></button>
+                                <button onclick="showConfirm()"><i class='bx bx-cloud-download' ></i></button>
+                                <button><i class='bx bx-edit' id="editBtn"></i></button>
+                                <button onclick="showConfirm()"><i class='bx bx-trash' ></i></button>
+                            </span>
+                        </div>
+                    </td>
+                    
+                </tr>
+                <tr class="cell3">
+                    <td class="stars_fav">
+                        <i class='bx bx-star'></i>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td class="Btn_cells">
+                            <div>
+                                <span>
+                                    <button><i class='bx bx-show' onclick="showContent()"></i></button>
+                                    <button onclick="showConfirm()"><i class='bx bx-cloud-download' ></i></button>
+                                    <button><i class='bx bx-edit' id="editBtn"></i></button>
+                                    <button onclick="showConfirm()"><i class='bx bx-trash' ></i></button>
+                                </span>
+                            </div>
+                        </td>
+                        
+                    </td>
+                </tr>
+                <tr class="cell4">
+                    <td class="stars_fav">
+                        <i class='bx bx-star'></i>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td class="Btn_cells">
+                            <div>
+                                <span>
+                                    <button><i class='bx bx-show' onclick="showContent()" ></i></button>
+                                    <button onclick="showConfirm()"><i class='bx bx-cloud-download' ></i></button>
+                                    <button><i class='bx bx-edit' id="editBtn"></i></button>
+                                    <button onclick="showConfirm()"><i class='bx bx-trash' ></i></button>
+                                </span>
+                            </div>
+                        </td>
+                        
+                    </td>
+                </tr>
+                <tr class="cell5">
+                    <td class="stars_fav">
+                        <i class='bx bx-star'></i>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td class="Btn_cells">
+                            <div>
+                                <span>
+                                    <button><i class='bx bx-show' onclick="showContent()"></i></button>
+                                    <button onclick="showConfirm()"><i class='bx bx-cloud-download' ></i></button>
+                                    <button><i class='bx bx-edit' id="editBtn"></i></button>
+                                    <button onclick="showConfirm()"><i class='bx bx-trash' ></i></button>
+                                </span>
+                            </div>
+                        </td>
+                        
+                    </td>
+                </tr>
+                <tr class="cell5">
+                    <td class="stars_fav">
+                        <i class='bx bx-star'></i>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td class="Btn_cells">
+                            <div>
+                                <span>
+                                    <button><i class='bx bx-show'onclick="showContent()" ></i></button>
+                                    <button onclick="showConfirm()"><i class='bx bx-cloud-download' ></i></button>
+                                    <button><i class='bx bx-edit' id="editBtn"></i></button>
+                                    <button onclick="showConfirm()"><i class='bx bx-trash' ></i></button>
+                                </span>
+                            </div>
+                        </td>
+                        
+                    </td>
+                </tr>
+                <tr class="cell6">
+                    <td class="stars_fav">
+                        <i class='bx bx-star'></i>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td class="Btn_cells">
+                            <div>
+                                <span>
+                                    <button><i class='bx bx-show' onclick="showContent()"></i></button>
+                                    <button onclick="showConfirm()"><i class='bx bx-cloud-download' ></i></button>
+                                    <button><i class='bx bx-edit' id="editBtn"></i></button>
+                                    <button onclick="showConfirm()"><i class='bx bx-trash' ></i></button>
+                                </span>
+                            </div>
+                        </td>
+                        
+                    </td>
+                </tr>
+                <tr class="cell7">
+                    <td class="stars_fav">
+                        <i class='bx bx-star'></i>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td class="Btn_cells">
+                            <div>
+                                <span>
+                                    <button><i class='bx bx-show' onclick="showContent()"></i></button>
+                                    <button onclick="showConfirm()"><i class='bx bx-cloud-download' ></i></button>
+                                    <button><i class='bx bx-edit' id="editBtn"></i></button>
+                                    <button onclick="showConfirm()"><i class='bx bx-trash' ></i></button>
+                                </span>
+                            </div>
+                        </td>
+                        
+                    </td>
+                </tr>
+                <tr class="cell8">
+                    <td class="stars_fav">
+                        <i class='bx bx-star'></i>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td class="Btn_cells">
+                            <div>
+                                <span>
+                                    <button><i class='bx bx-show' onclick="showContent()" ></i></button>
+                                    <button onclick="showConfirm()"><i class='bx bx-cloud-download' ></i></button>
+                                    <button><i class='bx bx-edit' id="editBtn"></i></button>
+                                    <button onclick="showConfirm()"><i class='bx bx-trash' ></i></button>
+                                </span>
+                            </div>
+                        </td>
+                        
+                    </td>
+                </tr>
+                <tr class="cell9">
+                    <td class="stars_fav">
+                        <i class='bx bx-star'></i>
+                    </td>
+                    <td>
+                        <div>
+                            <span>
+                                lorem
+                            </span>
+                        </div>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <span>
+                                    lorem
+                                </span>
+                            </div>
+                        </td>
+                        <td class="Btn_cells">
+                            <div>
+                                <button><i class='bx bx-show' onclick="showContent()"></i></button>
+                                <button onclick="showConfirm()"><i class='bx bx-cloud-download' ></i></button>
+                                <button><i class='bx bx-edit' id="editBtn"></i></button>
+                                <button onclick="showConfirm()"><i class='bx bx-trash' ></i></button>
+                            </div>
+                        </td>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div id="content_in_preview" class="content_in_preview" style="display: none;">
+            <div class="details-container">
+                <div class="details-section">
+                    <h2>Author Information</h2>
+                    <p><strong>Name:</strong></p>
+                    <input type="text" value="Author1" readonly>
+                    <p><strong>Agency:</strong></p>
+                    <input type="text" value="Agency1" readonly>
+                    <p><strong>Department:</strong></p>
+                    <input type="text" value="Department1" readonly>
+                </div>
+                <div class="details-section">
+                    <h2>Document Information</h2>
+                    <p><strong>File Name:</strong></p>
+                    <input type="text" value="Document1.pdf" readonly>
+                    <p><strong>Title:</strong></p>
+                    <input type="text" value="Document1" readonly>
+                    <p><strong>Subject:</strong></p>
+                    <input type="text" value="Subject1" readonly>
+                    <p><strong>Document Type:</strong></p>
+                    <input type="text" value="Type1" readonly>
+                    <p><strong>Confidentiality Level:</strong></p>
+                    <input type="text" value="Confidential" readonly>
+                    <p><strong>Date Added:</strong></p>
+                    <input type="text" value="2024-05-16" readonly>
+                    <p><strong>Status:</strong></p>
+                    <input type="text" value="Draft" readonly>
+                </div>
+            </div>
+            <div class="embed-container">
+                <embed src="Document1.pdf" width="800px" height="600px" />
+            </div>
+        </div>
+        
+        <div class="Rev_edit_doc" id="revEditContent">
+            <div class="title_reup">
+                <h2>
+                    Edit document formation
+                </h2>
+                <button>
+                    ReUpload file <i class='bx bx-cloud-upload'></i>
+                </button>
+            </div>
+            <div class="docu_name_cont">
+                <input type="text" placeholder="Document.pdf" id="file_name1">
+            </div>
+            <div class="title_name_cont">
+                <input type="text" placeholder="Project XYZ" id="title1">
+                <input type="text" placeholder="Project for I.T" id="subject1">
+            </div>
+            <div class="the_agency_cont">
+                <div id="docu_type1">
+                    PDF <i class='bx bxs-down-arrow'></i>
+                </div>
+                <div id="cho_agency1">
+                    Information Technology <i class='bx bxs-down-arrow'></i>
+                </div>
+                <div id="confi1">
+                    Viewer<i class='bx bxs-down-arrow'></i>
+                </div>
+            </div>
+            <div class="status_tags1">
+                <div id="stats1">
+                    Status <i class='bx bxs-down-arrow'></i>
+                </div>
+                <div id="tags1">
+                    Tags <i class='bx bxs-down-arrow'></i>
+                </div>
+                <div class="three_files1">
+                    <span>
+                        sample <i class='bx bxs-x-circle'></i>
+                    </span>
+                    <span>
+                        sample  <i class='bx bxs-x-circle'></i>
+                    </span>
+                    <span>
+                        sample  <i class='bx bxs-x-circle'></i>
+                    </span>
+                </div>
+            </div>
+            <div class="author_info1">
+                <h2>
+                    Author Information
+                </h2>
+            </div>
+            <div class="sur_first1">
+                <div class="sur_n_first_bars1">
+                    <input type="text" placeholder="Elena" id="surname1">
+                    <input type="text" placeholder="Reyna" id="first_name1">
+                </div>
+            </div>
+
+            <div class="status">
+                <h2>
+                    Status
+                </h2>
+                <div class="final_drpdwn-cont">
+                    <p>
+                        Final <i class='bx bxs-down-arrow'></i>
+                    </p>
+                </div>
+            </div>
+
+            <div class="comments">
+                <h2>
+                    Comments
+                </h2>
+                <div class="Cruz_elena">
+                    <h4>
+                        Cruz, Elena
+                    </h4>
+                    <div class="elena_comment">
+                        <p>
+                            WOW, That is great! Good Job 
+                        </p>
+                    </div>
+                </div>
+                <div class="Yaki_soba">
+                    <h4>
+                        Yaki, Soba
+                    </h4>
+                    <div class="taki_comment">
+                        <p>
+                            Your exemplary efforts and remarkable dedication 
+                            to the task at hand have not gone unnoticed. 
+                            Your commitment to excellence and unwavering 
+                            focus on achieving the highest standards are truly commendable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn_repo_confirm_cancel1">
+                <button class="cancel_btn_repo">
+                    Cancel
+                </buttons>
+                <button class="confirm_btn_repo">
+                    Confirm
+                </buttons>
+            </div>
+
+        </div>
+
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

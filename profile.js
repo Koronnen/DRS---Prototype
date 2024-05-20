@@ -14,3 +14,7 @@ function saveUsername() {
     var usernameContainer = document.getElementById("username_container");
     usernameContainer.innerHTML = `<span id='username'>${newUsername}</span> <button class='edit_name' onclick='editUsername()'><i class='fas fa-pen'></i></button>`;
 }
+
+function saveChanges() {
+    alert("Changes saved.")
+}

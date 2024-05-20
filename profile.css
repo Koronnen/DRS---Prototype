@@ -107,3 +107,10 @@ td {
 .exit:hover {
     background-color: #b61a20;
 }
+
+#username_input {
+    background-color: transparent;
+    padding: 8px;
+    font-size: 25px;
+    border: transparent;
+}
